@@ -1,0 +1,4 @@
+version = 1
+SPDX-PackageName = "AMH Website"
+SPDX-PackageSupplier = "AMH Committee"
+annotations = []
