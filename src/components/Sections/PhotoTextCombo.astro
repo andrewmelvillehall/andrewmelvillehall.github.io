@@ -1,0 +1,39 @@
+---
+export interface Props {
+  image: string;
+  imageAlt: string;
+  photoSide?: "left" | "right";
+}
+
+const { image, imageAlt, photoSide = "right" } = Astro.props;
+---
+
+<section class="py-16">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {
+        photoSide === "right" ? (
+          <div>
+            <slot />
+          </div>
+        ) : null
+      }
+
+      <div>
+        <img
+          src={image}
+          alt={imageAlt}
+          class="rounded-lg shadow-lg object-cover w-full h-full aspect-square"
+        />
+      </div>
+
+      {
+        photoSide === "left" ? (
+          <div>
+            <slot />
+          </div>
+        ) : null
+      }
+    </div>
+  </div>
+</section>

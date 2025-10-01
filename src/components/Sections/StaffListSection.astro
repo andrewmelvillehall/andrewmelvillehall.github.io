@@ -1,0 +1,59 @@
+---
+import type { InferEntrySchema } from "astro:content";
+import { getCollection } from "astro:content";
+
+export interface Props {
+    showAll?: boolean
+    limit?: number
+    filter: (val: {data: InferEntrySchema<"staff">}) => boolean
+}
+
+const { showAll = true, limit = 6, filter = (_) => true } = Astro.props;
+
+const allStaff = await getCollection("staff", ({ data }) =>
+  import.meta.env.PROD ? !data.draft : true
+);
+const staffMembers = allStaff
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, showAll ? undefined : limit);
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+      {staffMembers.filter(filter).map(staff => (
+        <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col h-full">
+          <!-- Foto (4:3) -->
+          <div class="relative w-full pb-[100%]">
+            <img
+              src={staff.data.image}
+              alt={staff.data.name}
+              class="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          </div>
+          <div class="p-4 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-semibold mb-1">{staff.data.name} ({staff.data.pronouns})</h3>
+              <p class="text-primary-600 mb-2">{staff.data.title}</p>
+              <p class="text-gray-700 text-sm">{staff.data.bio}</p>
+            </div>
+            <div class="mt-4 space-y-1 text-sm">
+              {staff.data.email && (
+                <a
+                  href={`mailto:${staff.data.email}`}
+                  class="text-primary-600 hover:underline block"
+                >
+                  {staff.data.email}
+                </a>
+              )}
+              {staff.data.phone && (
+                <a
+                  href={`tel:${staff.data.phone}`}
+                  class="text-primary-600 hover:underline block"
+                >
+                  {staff.data.phone}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>

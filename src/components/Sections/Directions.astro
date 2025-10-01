@@ -1,0 +1,68 @@
+---
+import Button from "../UI/Button.astro";
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Location & Directions</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're easy to find</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="bg-gray-200 rounded-lg overflow-hidden h-96">
+        <div class="w-full h-full flex items-center justify-center bg-gray-300">
+          <iframe
+            title="Google map showing AMH location"
+            style="border: 0;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2211.375951850863!2d-2.818264954386636!3d56.3405974725203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865779c70d150f%3A0x9e2450dd3310bd69!2sAndrew%20Melville%20Hall!5e0!3m2!1sen!2suk!4v1709301666523!5m2!1sen!2suk"
+            width="100%"
+            height="100%"
+            allowfullscreen=""
+            loading="eager"
+            aria-label="map to Andrew Melville Hall"
+            data-gtm-yt-inspected-9413523_49="true"
+            data-gtm-yt-inspected-48="true"></iframe>
+        </div>
+      </div>
+
+      <div>
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold mb-4">Getting Here</h3>
+
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-bold mb-2">By Car</h4>
+              <p class="text-gray-700">
+                There is a large car park just outside the hall for anyone with <a
+                  href="https://www.st-andrews.ac.uk/guides/car-parking-permit-student/"
+                  class="text-primary-600 hover:text-primary-700"
+                  >Student Parking Permit</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-bold mb-2">Public Transportation</h4>
+              <p class="text-gray-700">
+                If you are arriving from Leuchars Railway Station, you can get
+                the 99 towards St Andrews. Get off at the Old Course Hotel bus
+                stop and then walk about 10 minutes to AMH.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <Button
+              href="https://maps.google.com/maps/dir//Andrew+Melville+Hall+University+of+Saint+Andrews+193+Andrew+Melville+Hall+North+Haugh,+St+Andrews+KY16+9SU/@56.3407228,-2.8169375,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x48865779bf79f1f7:0xe218d47af346d5bc"
+              target="_blank"
+              variant="primary"
+            >
+              Get Directions
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

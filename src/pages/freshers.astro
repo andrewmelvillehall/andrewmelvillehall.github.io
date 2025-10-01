@@ -1,0 +1,377 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/Sections/PageHeader.astro";
+import CallToAction from "../components/Sections/CallToAction.astro";
+import Button from "../components/UI/Button.astro";
+import Directions from "../components/Sections/Directions.astro";
+import Tick from "../components/Icons/Tick.astro";
+import Cross from "../components/Icons/Cross.astro";
+---
+
+<BaseLayout
+  title="I'm New - Andrew Melville Hall"
+  description="Everything you need to know about joining the Melville Community"
+>
+  <PageHeader
+    title="I'm New Here"
+    subtitle="Welcome! We're glad you're joining us."
+    backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=600&fit=crop&crop=center"
+  />
+
+  <!-- What to Expect -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What to Expect</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Here's what you can expect when you visit us for the first time
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div
+            class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 text-primary-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Service Length</h3>
+          <p class="text-gray-700">
+            Our services typically last about 75 minutes, including worship,
+            announcements, and the sermon.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div
+            class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 text-primary-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Worship Style</h3>
+          <p class="text-gray-700">
+            Our worship blends contemporary and traditional elements. We sing
+            both modern worship songs and classic hymns.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div
+            class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 text-primary-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Teaching Style</h3>
+          <p class="text-gray-700">
+            Our messages are biblically-based, practical, and applicable to
+            everyday life. We focus on how Scripture speaks to our current
+            challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Wear -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=600&fit=crop&crop=center"
+            alt="Casual church attire"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">What to Wear</h2>
+          <p class="text-gray-700 mb-6 text-lg">
+            We want you to feel comfortable when you visit. You'll find people
+            dressed in everything from casual (jeans and t-shirts) to business
+            casual (slacks and button-ups or dresses).
+          </p>
+          <p class="text-gray-700 mb-6 text-lg">
+            Our priority is that you join us, not what you wear. Come as you
+            are, and know you'll be welcomed warmly!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Times -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Meal Times</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <h3 class="text-xl font-bold mb-3">Breakfast</h3>
+          <div class="mb-4">
+            <p class="text-2xl font-bold text-primary-600 mb-2">
+              Every Day 08:00 - 09:30
+            </p>
+            <p class="text-gray-600">
+              Cooked breakfast, cereals and fruit available
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <h3 class="text-xl font-bold mb-3">Lunch</h3>
+          <div class="mb-4">
+            <p class="text-2xl font-bold text-primary-600 mb-2">
+              Every Day 12:00 - 13:30
+            </p>
+            <p class="text-gray-600">Menu changes on a 4 weekly cycle</p>
+            <p class="italic text-gray-500 mt-2">
+              Packed lunches are available
+            </p>
+          </div>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <h3 class="text-xl font-bold mb-3">Dinner</h3>
+          <div class="mb-4">
+            <p class="text-2xl font-bold text-primary-600 mb-2">
+              Monday - Friday 17:30 - 19:00
+            </p>
+            <p class="text-gray-600">Menu changes on a 4 weekly cycle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Kids -->
+  <section id="kids" class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- What to bring -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">What to bring</h2>
+
+          <ul class="space-y-4 mb-6">
+            <li class="flex items-start">
+              <Tick />
+              <span class="text-gray-700"> Towels and bedding </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- What not to bring -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">What not to bring</h2>
+
+          <ul class="space-y-4 mb-6">
+            <li class="flex items-start">
+              <Cross />
+              <span class="text-gray-700">
+                Electrical items with non-UK plugs
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Directions -->
+  <Directions />
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Answers to common questions from first-time visitors
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-4">
+          <details class="group bg-white p-6 rounded-lg shadow-sm">
+            <summary class="flex justify-between items-center cursor-pointer">
+              <h3 class="text-xl font-bold">Where do I go when I arrive?</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"></path>
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-700">
+              When you arrive, look for our welcome team members wearing blue
+              name tags. They'll greet you, help you check in your children if
+              needed, and direct you to the sanctuary or any other areas you'd
+              like to visit.
+            </p>
+          </details>
+
+          <details class="group bg-white p-6 rounded-lg shadow-sm">
+            <summary class="flex justify-between items-center cursor-pointer">
+              <h3 class="text-xl font-bold">
+                Will I be asked to stand up or introduce myself?
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"></path>
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-700">
+              No, we won't single you out or ask you to stand up. We want you to
+              feel comfortable, not put on the spot. We do have a welcome card
+              in the service bulletin if you'd like to share your information
+              with us.
+            </p>
+          </details>
+
+          <details class="group bg-white p-6 rounded-lg shadow-sm">
+            <summary class="flex justify-between items-center cursor-pointer">
+              <h3 class="text-xl font-bold">
+                Is there a coffee hour or fellowship time?
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"></path>
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-700">
+              Yes! We have coffee, tea, and light refreshments available before
+              and after each service in our fellowship hall. It's a great
+              opportunity to meet people and ask any questions you might have.
+            </p>
+          </details>
+
+          <details class="group bg-white p-6 rounded-lg shadow-sm">
+            <summary class="flex justify-between items-center cursor-pointer">
+              <h3 class="text-xl font-bold">
+                Do you have facilities for nursing mothers?
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"></path>
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-700">
+              Yes, we have a comfortable, private nursing mothers' room adjacent
+              to the nursery. It's equipped with changing facilities,
+              comfortable seating, and a live audio feed of the service.
+            </p>
+          </details>
+
+          <details class="group bg-white p-6 rounded-lg shadow-sm">
+            <summary class="flex justify-between items-center cursor-pointer">
+              <h3 class="text-xl font-bold">
+                How do I get connected beyond Sunday services?
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"></path>
+              </svg>
+            </summary>
+            <p class="mt-4 text-gray-700">
+              The best way to get connected is through our small groups and
+              ministry teams. Visit our welcome center after the service, and
+              we'll help you find the right fit. You can also attend our "New to
+              Andrew Melville Hall" class, offered monthly.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan Your Visit CTA -->
+  <CallToAction title="CTA" content="CTA" backgroundImg="abc"
+    ><Button href="/contact" variant="primary" size="lg">
+      Contact Us
+    </Button></CallToAction
+  >
+</BaseLayout>
