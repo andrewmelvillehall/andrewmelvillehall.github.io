@@ -14,7 +14,7 @@ const {
   title,
   description,
   image = {
-    url: "/uploads/church-default.webp",
+    url: "/uploads/logo.webp",
     alt: "Andrew Melville Hall",
   },
   type = "website",
@@ -25,7 +25,7 @@ const {
 const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site);
 
 // Get Church address and contact info (would come from site config in a real implementation)
-const churchInfo = {
+const hallInfo = {
   name: "Andrew Melville Hall",
   address: {
     streetAddress: "Andrew Melville Hall, North Haugh",
@@ -65,19 +65,19 @@ const churchInfo = {
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Church",
-    "name": "${churchInfo.name}",
+    "@type": "Hall",
+    "name": "${hallInfo.name}",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "${churchInfo.address.streetAddress}",
-      "addressLocality": "${churchInfo.address.addressLocality}",
-      "addressRegion": "${churchInfo.address.addressRegion}",
-      "postalCode": "${churchInfo.address.postalCode}",
-      "addressCountry": "${churchInfo.address.addressCountry}"
+      "streetAddress": "${hallInfo.address.streetAddress}",
+      "addressLocality": "${hallInfo.address.addressLocality}",
+      "addressRegion": "${hallInfo.address.addressRegion}",
+      "postalCode": "${hallInfo.address.postalCode}",
+      "addressCountry": "${hallInfo.address.addressCountry}"
     },
-    "telephone": "${churchInfo.telephone}",
-    "email": "${churchInfo.email}",
-    "url": "${churchInfo.url}"
+    "telephone": "${hallInfo.telephone}",
+    "email": "${hallInfo.email}",
+    "url": "${hallInfo.url}"
   }
 </script>
 
@@ -92,7 +92,7 @@ const churchInfo = {
         "description": "${description}",
         "publisher": {
           "@type": "Organization",
-          "name": "${churchInfo.name}",
+          "name": "${hallInfo.name}",
           "logo": {
             "@type": "ImageObject",
             "url": "${new URL("/uploads/logo.png", Astro.site)}"
