@@ -1,0 +1,84 @@
+---
+export interface Props {
+  questions: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+const { questions } = Astro.props;
+---
+
+<style>
+  /* Slide down/up animation */
+  details[open] > div {
+    animation: slideDown 3.35s ease-out forwards;
+  }
+  details:not([open]) > div {
+    animation: slideUp 3.3s ease-in forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      max-height: 0;
+    }
+    to {
+      max-height: 1000px;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      max-height: 1000px;
+    }
+    to {
+      max-height: 0;
+    }
+  }
+</style>
+
+<section class="py-16 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Frequently Asked Questions
+      </h2>
+      <!-- <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Answers to common questions from first-time visitors
+      </p> -->
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-4">
+        {
+          questions.map((question) => (
+            <details class="group bg-white p-6 rounded-lg shadow-sm">
+              <summary class="flex justify-between items-center cursor-pointer">
+                <h3 class="text-xl font-bold">{question.question}</h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4v16m8-8H4"
+                  />
+                </svg>
+              </summary>
+              <div class="overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0 group-open:max-h-96">
+                <div class="mt-4 text-gray-700 ">
+                  <p>{question.answer}</p>
+                </div>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
