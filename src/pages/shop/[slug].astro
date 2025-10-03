@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostLayout from "../../layouts/PostLayout.astro";
+import Button from "../../components/UI/Button.astro";
+import { getCollection } from "astro:content";
+import ShopLayout from "../../layouts/ShopLayout.astro";
+
+// Generate static paths for all sermons
+export async function getStaticPaths() {
+  try {
+    const shopEntries = await getCollection("shop", ({ data }) => {
+      return import.meta.env.PROD ? !data.draft : true;
+    });
+
+    return shopEntries.map((entry) => ({
+      params: { slug: entry.slug },
+      props: { entry },
+    }));
+  } catch (error) {
+    // If the collection doesn't exist yet, return an empty array
+    return [];
+  }
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout
+  title={`${entry.data.name} - Merch - Andrew Melville Hall`}
+  description={entry.data.summary}
+  image={entry.data.thumb
+    ? { url: entry.data.thumb, alt: entry.data.name }
+    : undefined}
+  type="article"
+>
+  <ShopLayout
+    name={entry.data.name}
+    gallery={entry.data.gallery}
+    price={entry.data.price}
+    sizes={entry.data.sizes}
+    colors={entry.data.colors}
+    orderLink={entry.data.orderLink}
+  >
+    <!-- Sermon Details -->
+    <div class="bg-gray-50 rounded-lg p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </div>
+
+    <!-- Sermon Content -->
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900 prose-a:text-primary-600 hover:prose-a:text-primary-700"
+    >
+      <Content />
+    </article>
+
+    <!-- Navigation -->
+    <div class="mt-12">
+      <a
+        href="/shop"
+        class="inline-flex items-center text-primary-600 hover:text-primary-700"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to All Merch
+      </a>
+    </div>
+  </ShopLayout>
+</BaseLayout>

@@ -36,19 +36,24 @@ const eventsCollection = defineCollection({
 const shopCollection = defineCollection({
   type: "content",
   schema: z.object({
-    title: z.string(),
+    name: z.string(),
     slug: z.string().optional(), // Auto-generated if not provided
     date: z.date(),
-    speaker: z.string(),
-    series: z.string().optional(),
-    scripture: z.string().optional(),
-    audioUrl: z.string().url().optional(),
-    videoUrl: z.string().url().optional(),
-    thumb: z.string().startsWith("/uploads/shop/").optional(), // Thumbnail
-    gallery: z.array(z.string().startsWith("/uploads/shop/").optional()),
-    summary: z.string().optional(),
-    tags: z.array(z.string()).optional(),
+    thumb: z.string().startsWith("/uploads/shop/"), // Thumbnail
+    gallery: z.array(z.string().startsWith("/uploads/shop/")),
+    summary: z.string(),
+    price: z.number(),
+    colors: z
+      .array(
+        z.object({
+          name: z.string(),
+          value: z.string(),
+        })
+      )
+      .optional(),
+    sizes: z.array(z.string()).optional(),
     draft: z.boolean().default(false),
+    orderLink: z.string().optional(),
   }),
 });
 
@@ -59,7 +64,7 @@ const blogCollection = defineCollection({
     slug: z.string().optional(),
     pubDate: z.date(),
     description: z.string(), // Short description for previews
-    author: z.string().default("Church Staff"),
+    author: z.string().default("Your Committee"),
     image: z
       .object({
         url: z.string().startsWith("/uploads/blog/"),

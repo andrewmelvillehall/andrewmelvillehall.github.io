@@ -5,11 +5,11 @@ import Button from "../UI/Button.astro";
 import { formatDate } from "../../utils/dateUtils";
 
 export interface Props {
-  count?: number;
-  showViewAll?: boolean;
+  limit?: number;
+  showAll?: boolean;
 }
 
-const { count = 3, showViewAll = true } = Astro.props;
+const { limit = 3, showAll = true } = Astro.props;
 
 // Get events sorted by date (newest first)
 const allEvents = await getCollection("events", ({ data }) => {
@@ -22,7 +22,7 @@ const events = allEvents
     (a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime()
   )
   .filter((event) => new Date(event.data.date) >= new Date()) // Only future events
-  .slice(0, count);
+  .slice(0, limit);
 ---
 
 <section class="py-16 bg-white">
@@ -98,7 +98,7 @@ const events = allEvents
     </div>
 
     {
-      showViewAll && events.length > 0 && (
+      !showAll && events.length > 0 && (
         <div class="mt-12 text-center">
           <Button href="/events" variant="outline">
             View All Events

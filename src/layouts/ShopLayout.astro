@@ -1,0 +1,104 @@
+---
+export const layout = "../layouts/BaseLayout.astro";
+
+import Gallery from "../components/Sections/Gallery.astro";
+import PageHeader from "../components/Sections/PageHeader.astro";
+import Button from "../components/UI/Button.astro";
+import { formatDate } from "../utils/dateUtils";
+
+export interface Props {
+  name: string;
+  gallery: string[];
+  sizes?: string[];
+  price: number;
+  colors?: { name: string; value: string }[];
+  orderLink?: string;
+}
+
+const { name, price, colors, gallery, sizes, orderLink } = Astro.props;
+---
+
+<!-- <PageHeader title={title} /> -->
+<main class="container py-8">
+  <div class="mx-auto max-w-3xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Gallery images={gallery} />
+      <!-- Item Details -->
+      <div class="max-w-2xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">{name}</h1>
+
+        <p class="text-2xl font-semibold text-gray-900 mb-6">
+          £{price.toFixed(2)}
+        </p>
+
+        {
+          colors && colors.length > 0 && (
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-3">
+                Colour
+              </label>
+              <div class="flex gap-3">
+                {colors.map((color, index) => (
+                  <button
+                    type="button"
+                    class="w-10 h-10 rounded-full border-2 border-gray-300 hover:border-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-all"
+                    style={`background-color: ${color.value}`}
+                    aria-label={color.name}
+                    data-color={color.name}
+                  />
+                ))}
+              </div>
+            </div>
+          )
+        }
+
+        {
+          sizes && (
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-3">
+                Size
+              </label>
+              <div class="flex flex-wrap gap-2">
+                {sizes.map((size) => (
+                  <button
+                    type="button"
+                    class="px-4 py-2 border-2 border-gray-300 rounded-md hover:border-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-all"
+                    data-size={size}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )
+        }
+
+        <!-- <button
+          type="button"
+          class="w-full bg-gray-900 text-white py-3 px-6 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors font-medium"
+        >
+          Order Now
+        </button> -->
+        {
+          orderLink ? (
+            <Button href={orderLink} class="w-full">
+              Order Now
+            </Button>
+          ) : (
+            <Button href={orderLink} class="w-full" disabled>
+              Coming Soon
+            </Button>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="mb-8"></div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900 prose-a:text-primary-600 hover:prose-a:text-primary-700"
+    >
+      <slot />
+    </article>
+  </div>
+</main>
