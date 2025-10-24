@@ -33,7 +33,8 @@ const staffMembers = allStaff
             <div>
               <h3 class="text-xl font-semibold mb-1">{staff.data.name} ({staff.data.pronouns})</h3>
               <p class="text-primary-600 mb-2">{staff.data.title}</p>
-              <p class="text-gray-700 text-sm">{staff.data.bio}</p>
+              <p class="text-gray-700 text-sm mb-2"><strong>Bio: </strong>{staff.data.bio}</p>
+              <p class="text-gray-700 text-sm"><strong>Favourite thing about AMH: </strong>{staff.data.favouriteThing}</p>
             </div>
             <div class="mt-4 space-y-1 text-sm">
               {staff.data.email && (

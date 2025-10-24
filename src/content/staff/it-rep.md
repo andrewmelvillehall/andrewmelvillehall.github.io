@@ -5,7 +5,8 @@ title: "IT Rep"
 image: "/uploads/staff/zoe.webp"
 email: "mjn6@st-andrews.ac.uk"
 bio: "The glorious Zoe. Projector whisperer, printer fixer and IT extraordinaire."
-order: 2
+favouriteThing: "The events."
+order: 4
 draft: false
 isExec: false
 ---

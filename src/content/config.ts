@@ -13,6 +13,7 @@ const staffCollection = defineCollection({
     order: z.number().default(0),
     draft: z.boolean().default(false),
     isExec: z.boolean().default(false),
+    favouriteThing: z.string().optional(),
   }),
 });
 
