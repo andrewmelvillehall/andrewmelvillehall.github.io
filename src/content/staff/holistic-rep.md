@@ -1,6 +1,6 @@
 ---
 name: "Brett Welsby"
-pronouns: ""
+pronouns: "he/him"
 title: "Holistic Rep"
 image: "/uploads/staff/brett.webp"
 email: "blw3@st-andrews.ac.uk"
