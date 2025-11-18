@@ -10,7 +10,7 @@ image:
     alt: "Melvillites suffering from an early fire drill",
   }
 tags: ["example"]
-draft: false
+draft: true
 ---
 
 # h1 Heading 8-)
