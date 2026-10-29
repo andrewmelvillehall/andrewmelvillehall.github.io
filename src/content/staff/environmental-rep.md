@@ -1,11 +1,15 @@
 ---
-name: "Maya Couey"
+name: "Aaliyah Verhoef"
 pronouns: "she/her"
 title: "Environmental Rep"
-image: "/uploads/staff/maya.webp"
-email: "mlc20@st-andrews.ac.uk"
-bio: " Fish enthusiast and nature lover. The person who will remind you to recycle and take care of the plants :)"
-favouriteThing: "It's such a close-knit community in St Andrews. Everyone makes you feel welcome and the committee and wardens always have fun stuff planned. As a fresher, it's the best place you can be to get integrated into the university."
+image: "/uploads/staff/aaliyah.jpeg"
+email: "acv1@st-andrews.ac.uk"
+bio: " I am the Lorax, I speak for the trees (and the other plants, the animals,
+and the students). I'm the one trying to make it easier for everyone to be more
+environmentally friendly :)"
+favouriteThing: "Everyone says it, but the community here is fantastic. Despite
+supposedly being a 'sinking ship' Melville is incredibly welcoming and filled
+with the most amazing people!"
 order: 9
 draft: false
 isExec: false
