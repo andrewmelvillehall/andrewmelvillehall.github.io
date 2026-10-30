@@ -4,11 +4,11 @@ date: 2026-11-14
 endDate: 2026-11-14
 time: "19:00 - 01:00"
 location: "Younger Hall"
-image: ""
-summary: ""
+image: "/uploads/events/2026/melvilles-final-hour.jpeg"
+summary: "AMH Ball 2026 - Melvilles final hour"
 tags: ["social", "hall committee", "ball"]
-registationRequired true
-registrationLink: ""
+registationRequired: false
+# registrationLink: ""
 draft: false
 ---
 
