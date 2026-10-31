@@ -2,7 +2,7 @@
 name: "August Loevendal"
 pronouns: "he/him"
 title: "Social Convenor"
-image: "/uploads/staff/alex.webp"
+image: "/uploads/staff/august.webp"
 email: "aw380@st-andrews.ac.uk"
 bio: "Auggu the pourer of pints, social(ist) convenor and planner of mysteries."
 favouriteThing: "Since my first day here, I have loved how inclusive and
