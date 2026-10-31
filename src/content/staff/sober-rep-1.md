@@ -2,7 +2,7 @@
 name: "Annabel Jackson"
 pronouns: "she/her"
 title: "Sober Rep"
-image: "/uploads/staff/annabel.jpg"
+image: "/uploads/staff/annabel.jpeg"
 email: "araj1@st-andrews.ac.uk"
 bio: "Making sure everyone has fun at free bars! You’ll often see me with a
 biscuit tin."
