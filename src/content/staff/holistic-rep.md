@@ -10,7 +10,7 @@ you are looking for some stress relieving events and keeping calm during exam
 seasons, i got you."
 stay chill xx."
 favouriteThing: "AMH has the best sunrises/sunsets on campus ;)"
-order: 11
+order: 12
 draft: false
 isExec: false
 ---
