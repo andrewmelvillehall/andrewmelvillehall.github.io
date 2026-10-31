@@ -1,11 +1,11 @@
 ---
-name: "Aurelie Coop"
-pronouns: "she/her"
+name: "Archie Borthwick"
+pronouns: "he/him"
 title: "Senior Student"
-image: "/uploads/staff/aurelie.webp"
-email: "ac476@st-andrews.ac.uk"
+image: "/uploads/staff/archie.webp"
+email: "ab649@st-andrews.ac.uk"
 bio: "The Senior Student. Meeting wrangler, agenda juggler, part-time chaos coordinator."
-favouriteThing: "The tight knit community feel you get from the very start."
+favouriteThing: "Without a doubt the community!!"
 order: 1
 draft: false
 isExec: true

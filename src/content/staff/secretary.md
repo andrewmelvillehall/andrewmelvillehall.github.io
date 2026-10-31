@@ -1,11 +1,11 @@
 ---
-name: "Ryan Oates"
+name: "Brett Welsby"
 pronouns: "he/him"
 title: "Secretary"
-image: "/uploads/staff/ryan.webp"
-email: "roo1@st-andrews.ac.uk"
+image: "/uploads/staff/brett.webp"
+email: "blw3@st-andrews.ac.uk"
 bio: "Protector of the constitution, guardian of the whiteboards and meeting maestro."
-favouriteThing: "As beautiful as the building is, my favourite thing about Melville has got to be the people and the sense of community."
+favouriteThing: "It’s size creates such a tight-knit sense of community!"
 order: 4
 draft: false
 isExec: true

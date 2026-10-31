@@ -1,11 +1,12 @@
 ---
-name: "Archie Borthwick"
-pronouns: "he/him"
+name: "Felicity Lawrence"
+pronouns: "she/her"
 title: "Treasurer"
-image: "/uploads/staff/archie.webp"
-email: "ab649@st-andrews.ac.uk"
+image: "/uploads/staff/felicity.webp"
+email: "fejl1@st-andrews.ac.uk"
 bio: "Setting budgets, managing funds."
-favouriteThing: "Without a doubt the community!!"
+favouriteThing: "Although a cliché, I love the community at AMH. As a fresher I
+have felt so welcomed from the day I moved in!"
 order: 5
 draft: false
 isExec: true
