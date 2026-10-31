@@ -1,11 +1,11 @@
 ---
-name: "Ben Montague"
+name: "Tom Salernitano"
 pronouns: "he/him"
 title: "Sports Captain"
-image: "/uploads/staff/ben.webp"
-email: "bcm5@st-andrews.ac.uk"
-bio: "I am the pool table man."
-favouriteThing: "The people"
+image: "/uploads/staff/tom.webp"
+email: "tas8@st-andrews.ac.uk"
+bio: ""
+favouriteThing: "Sense of community."
 order: 11
 draft: false
 isExec: false
