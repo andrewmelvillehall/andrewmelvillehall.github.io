@@ -1,12 +1,16 @@
 ---
-name: "Brett Welsby"
+name: "Josh Leuning"
 pronouns: "he/him"
 title: "Holistic Rep"
-image: "/uploads/staff/brett.webp"
-email: "blw3@st-andrews.ac.uk"
-bio: "Promoting mental health/wellbeing."
-favouriteThing: "It’s size creates such a tight-knit sense of community!"
-order: 11
+image: "/uploads/staff/josh.jpeg"
+email: "jdml1@st-andrews.ac.uk"
+bio: "hi its josh your faithful holistic rep! i hail from the great pacific
+northwest and outside of this hall im a big hiker, climber, and birdwatcher. if
+you are looking for some stress relieving events and keeping calm during exam
+seasons, i got you."
+stay chill xx."
+favouriteThing: "AMH has the best sunrises/sunsets on campus ;)"
+order: 12
 draft: false
 isExec: false
 ---
