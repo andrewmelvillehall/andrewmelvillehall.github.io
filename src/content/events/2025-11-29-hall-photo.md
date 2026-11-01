@@ -2,7 +2,7 @@
 title: "Hall Photo"
 date: 2025-11-29
 endDate: 2025-11-29
-# time: "5:30 PM - 11:00 PM"
+# time: "17:30 - 23:00"
 location: "The Mound"
 image: "/uploads/events/2025/hall-photo-78.webp"
 summary: "Get your smiles ready!"

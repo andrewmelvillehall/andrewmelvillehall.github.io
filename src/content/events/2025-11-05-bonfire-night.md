@@ -2,7 +2,7 @@
 title: "Free Bar and Bonfire"
 date: 2025-11-05
 endDate: 2025-11-05
-# time: "7:00 PM - 11:00 PM"
+# time: "19:00 - 23:00"
 location: "MCR & Beach"
 image: "/uploads/events/2025/bonfire-night.webp"
 summary: "Join us for a free bar followed by a bonfire on the beach"

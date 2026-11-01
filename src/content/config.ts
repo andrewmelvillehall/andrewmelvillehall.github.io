@@ -17,13 +17,20 @@ const staffCollection = defineCollection({
   }),
 });
 
+const hhmm = "([01]\\d|2[0-3]):[0-5]\\d";
+
 const eventsCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
     date: z.date(), // Event start date
     endDate: z.date().optional(), // Event end date
-    time: z.string().optional(), // e.g., "09:00 AM - 11:00 AM"
+    time: z.string() // e.g., "09:00 - 11:00"
+	.regex(new RegExp(`^${hhmm} - ${hhmm}$`), "Use HH:MM - HH:MM")
+	.transform((s) => {
+		const [start, end] = s.split(" - ");
+		return { start, end, label: `${start} – ${end}` };
+	}).optional(),
     location: z.string(),
     image: z.string().startsWith("/uploads/events/"),
     summary: z.string(),
@@ -91,3 +98,4 @@ export const collections = {
   blog: blogCollection,
   siteInfo: siteInfoCollection,
 };
+

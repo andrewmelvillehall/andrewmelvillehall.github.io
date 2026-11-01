@@ -2,7 +2,7 @@
 title: "Christmas Dinner & Free Bar"
 date: 2025-11-28
 endDate: 2025-11-28
-time: "5:30 PM - 11:00 PM"
+time: "17:30 - 23:00"
 location: "Dining Hall & MCR"
 image: "/uploads/events/2025/xmas.webp"
 summary: "It's nearly Christmas!!"

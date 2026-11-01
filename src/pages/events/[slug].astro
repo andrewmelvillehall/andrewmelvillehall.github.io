@@ -27,13 +27,27 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 // Format the dates for display
+if (!entry.data.endDate) entry.data.endDate = entry.data.date;
 const formattedDate = formatDate(entry.data.date);
-const formattedEndDate = entry.data.endDate
-  ? formatDate(entry.data.endDate)
-  : null;
+const formattedEndDate = formatDate(entry.data.endDate);
 
 // Determine if event is in the future
 const isFutureEvent = new Date(entry.data.date) > new Date();
+
+// Generate the google calendar link
+const ymd = (d: Date) => formatDate(d, "yyyyMMdd");
+const hm = (t: string) => t.replace(":", "") + "00";
+const TITLE = entry.data.title.split(" ").join("+");
+const START = entry.data.time ? `${ymd(entry.data.date)}T${hm(entry.data.time.start)}` : ymd(entry.data.date);
+const END = entry.data.time ? `${ymd(entry.data.endDate)}T${hm(entry.data.time.end)}` : ymd(entry.data.endDate);
+const DESCRIPTION = ""
+const LOCATION = entry.data.location;
+const link = `https://calendar.google.com/calendar/render?action=TEMPLATE
+&text=${TITLE}
+&dates=${START}/${END}
+&ctz=Europe/London
+&details=${DESCRIPTION}
+&location=${LOCATION}`;
 ---
 
 <BaseLayout
@@ -72,7 +86,7 @@ const isFutureEvent = new Date(entry.data.date) > new Date();
             </svg>
             <div>
               {
-                formattedEndDate && formattedEndDate !== formattedDate ? (
+                formattedEndDate !== formattedDate ? (
                   <p class="m-0">
                     {formattedDate} - {formattedEndDate}
                   </p>
@@ -80,7 +94,7 @@ const isFutureEvent = new Date(entry.data.date) > new Date();
                   <p class="m-0">{formattedDate}</p>
                 )
               }
-              {entry.data.time && <p class="m-0">{entry.data.time}</p>}
+              {entry.data.time && <p class="m-0">{entry.data.time.label}</p>}
             </div>
           </div>
         </div>
@@ -110,7 +124,10 @@ const isFutureEvent = new Date(entry.data.date) > new Date();
             </svg>
             <p class="m-0">{entry.data.location}</p>
           </div>
-        </div>
+		</div>
+		<!-- Calendar Link -->
+		{ console.log(entry) }
+		<Button href={link} target="_blank" rel="noopener noreferrer" variant="outline"> Add to Google Calendar </Button>
       </div>
 
       {
