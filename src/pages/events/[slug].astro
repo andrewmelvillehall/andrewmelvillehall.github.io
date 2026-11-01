@@ -34,6 +34,19 @@ const formattedEndDate = entry.data.endDate
 
 // Determine if event is in the future
 const isFutureEvent = new Date(entry.data.date) > new Date();
+
+// Generate the google calendar link
+console.log(entry);
+const TITLE = entry.data.title.split(" ").join("+");
+const START = 0;
+const END = 0;
+const DESCRIPTION = "";
+const LOCATION = "";
+const link = `https://calendar.google.com/calendar/render?action=TEMPLATE
+&text=${TITLE}
+&dates=${START}/${END}
+&details=${DESCRIPTION}
+&location=${LOCATION}`;
 ---
 
 <BaseLayout
@@ -112,6 +125,7 @@ const isFutureEvent = new Date(entry.data.date) > new Date();
           </div>
 		</div>
 		<!-- Calendar Link -->
+		<Button href={link} variant="outline"> Add to Google Calendar </Button>
       </div>
 
       {
