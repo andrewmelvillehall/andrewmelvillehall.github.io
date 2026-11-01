@@ -28,3 +28,5 @@ Doors open 7pm on Saturday the 14th of November and the festivities will go on t
 Tickets will be sold by reception after Halloween, 20£ for residents and 25£ for guests.
 
 We await you...
+
+![Final Hour Red](/uploads/events/2026/melvilles-final-hour.jpeg)
