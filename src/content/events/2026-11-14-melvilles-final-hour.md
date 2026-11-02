@@ -43,3 +43,11 @@ Tickets will be sold by reception after Halloween, 20£ for residents and 25£ f
 We await you...
 
 ![Melville's Final Hour](/uploads/events/2026/posters.png)
+
+## Do you have a party act??
+Are you or do you know someone with a cool party act? We are hoping to recruit students to provide some unconventional entertainment for a couple hours at the Andrew Melville Ball.
+You would be mingling and performing your act amongst the crowd.
+If you're able to help us out, you will get a free ticket to the ball, a free drink, etc.
+Fill out this form if you are intrested: [Party
+Act](https://docs.google.com/forms/d/e/1FAIpQLSeUH8tASXhxfG_FTB1GxJ_iMWTIv36x89dWoQfuphD8VH9QyA/viewform?usp=header
+"Fill out if you have a cool party act")
