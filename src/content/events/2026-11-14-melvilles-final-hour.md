@@ -38,7 +38,7 @@ The dress code will be formal with an emphasis on colourful outfits and extravag
 Doors open 7pm on Saturday the 14th of November and the festivities will go on till 1am in Younger Hall.
 
 ### Tickets
-Tickets will be sold by reception after Halloween, 20£ for residents and 25£ for guests.
+Tickets are being sold by reception in AMH during lunch, dinner, and free bar through Sunday the 8th, £20 for residents and £25 for guests.
 
 We await you...
 
