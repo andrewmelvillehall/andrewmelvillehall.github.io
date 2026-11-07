@@ -7,7 +7,7 @@ location: "Younger Hall"
 image: "/uploads/events/2026/melvilles-final-hour.jpeg"
 summary: "AMH Ball 2026 - Melvilles final hour"
 tags: ["social", "hall committee", "ball"]
-registationRequired: true
+registrationRequired: true
 registrationLink: "https://forms.cloud.microsoft/e/ASHPCWBf0k"
 draft: false
 ---
